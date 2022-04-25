@@ -24,7 +24,7 @@ window.addEventListener('load', function() {
     let lineF=Path.Line([0,a+15],[500,a+15])
 
     lineA.strokeColor=lineB.strokeColor=lineC.strokeColor=lineD.strokeColor='#ff0000';
-    lineE.strokeWidth=lineF.strokeWidth=2;
+    lineE.strokeWidth=lineF.strokeWidth=3;
     }
    
     // 画面を描く。
