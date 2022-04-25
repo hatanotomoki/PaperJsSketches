@@ -14,11 +14,19 @@ window.addEventListener('load', function() {
     };
    Path.Rectangle([0,0],[500,500])
 
-   for (let a = 10; a<500; a += 20)[Path.Line([a,0],[a,500])]
+   for(let a=0;a<500;a+=25)
+   for(let b=0;b<500;b+=25)
+   {let lineA = Path.Line([a,0],[a,500])
+    let lineB=Path.Line([a+5,0],[a+5,500])
+    let lineC=Path.Line([0,a],[500,a])
+    let lineD=Path.Line([0,a+5],[500,a+5])
+    let lineE=Path.Line([a+15,0],[a+15,500])
+    let lineF=Path.Line([0,a+15],[500,a+15])
+
+    lineA.strokeColor=lineB.strokeColor=lineC.strokeColor=lineD.strokeColor='#ff0000';
+    lineE.strokeWidth=lineF.strokeWidth=2;
+    }
    
-   Path.Line([a,0],[a,500])
-   let line = Path.Line([a,0],[a,500])
-   line.strokeColor= '#ff0000' 
     // 画面を描く。
     view.draw();
 });
