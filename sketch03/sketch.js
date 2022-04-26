@@ -8,8 +8,8 @@ window.addEventListener('load', function() {
     view.viewSize = new Size(500, 500);
 
     project.currentStyle = {
-        strokeColor: '#000000', // 線の色
-        fillColor: '#588044', // 塗りの色
+        strokeColor: '#ccbb49', // 線の色
+        fillColor: '#283382', // 塗りの色
         strokeWidth: 1 // 線の幅
     };
    Path.Rectangle([0,0],[500,500])
@@ -23,7 +23,7 @@ window.addEventListener('load', function() {
     let lineE=Path.Line([a+15,0],[a+15,500])
     let lineF=Path.Line([0,a+15],[500,a+15])
 
-    lineA.strokeColor=lineB.strokeColor=lineC.strokeColor=lineD.strokeColor='#c0c246';
+    lineA.strokeColor=lineB.strokeColor=lineC.strokeColor=lineD.strokeColor='#ffffff';
     lineE.strokeWidth=lineF.strokeWidth=3;
     }
    
