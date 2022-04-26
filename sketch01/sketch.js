@@ -8,22 +8,30 @@ window.addEventListener('load', function() {
     view.viewSize = new Size(500, 500);
 
     project.currentStyle = {
-        strokeColor: '#000000', // 線の色
-        fillColor: '#fbff00', // 塗りの色
+        strokeColor: '#ccbb49', // 線の色
+        fillColor: '#c1c2a1', // 塗りの色
         strokeWidth: 1 // 線の幅
     };
    Path.Rectangle([0,0],[500,500])
 
-   for(let a=0;a<500;a+=25)
+   for(let a=0;a<500;a+=70)
    for(let b=0;b<500;b+=25)
-   {let lineA = Path.Line([a,0],[a,500])
-    let lineB=Path.Line([a+5,0],[a+5,500])
+   {let lineA=Path.Line([a,0],[a,500])
+    let lineB=Path.Line([a+10,0],[a+10,500])
     let lineC=Path.Line([0,a],[500,a])
-    let lineD=Path.Line([0,a+5],[500,a+5])
-    let lineE=Path.Line([a+15,0],[a+15,500])
-    let lineF=Path.Line([0,a+15],[500,a+15])
+    let lineD=Path.Line([0,a+10],[500,a+10])
 
-    lineA.strokeColor=lineB.strokeColor=lineC.strokeColor=lineD.strokeColor='#ff0000';
+    let lineE=Path.Line([a+30,0],[a+30,500])
+    let lineF=Path.Line([0,a+25],[500,a+25])
+    let lineG=Path.Line([0,a+35],[500,a+35])
+    let line1=Path.Line([0,a+20],[500,a+20])
+
+    lineA.strokeColor=lineB.strokeColor='#ff0000';
+    lineC.strokeColor=lineD.strokeColor='#8da37e';
+    lineE.strokeColor='#000000'
+    lineF.strokeColor=lineG.strokeColor=
+
+
     lineE.strokeWidth=lineF.strokeWidth=3;
     }
    
