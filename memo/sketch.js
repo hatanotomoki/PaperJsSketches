@@ -4,18 +4,24 @@ window.addEventListener('load', function () {
 
     project.currentStyle = {
         strokeColor: "#ffffff", 
-        fillColor: "#ffffff", 
+        fillColor: null, 
         strokeWidth: 3 
     };
 
     Path.Rectangle([0, 0], [500, 500])
     let background=Path.Rectangle([0, 0], [500, 500])
+    background.fillColor="#000000"
+    background.strokeColor=null
 
-    createCanvas(400, 400);
 
-    background(220);
-    
-    line(50, 50, 350, 350);    
+    for (let x=0;x<500;x+=w){
+        for(let y=0;y<500;y+=w) {
+            let q=Math.random()*300
+
+            let randx=Math.random
+            Path.Rectangle([x+q-150,y],[w,100])
+        }
+    }
    
 view.draw();
 });
