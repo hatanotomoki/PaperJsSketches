@@ -47,7 +47,6 @@ window.addEventListener('load', function () {
             ];            
             circle.strokeColor = pickRandom(colors);    
             }
-
         }
     }
 

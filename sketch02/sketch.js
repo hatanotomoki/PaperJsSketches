@@ -15,7 +15,6 @@ window.addEventListener('load', function() {
    Path.Rectangle([0,0],[500,500])
 
    for(let a=0;a<500;a+=25)
-   for(let b=0;b<500;b+=25)
    {let lineA = Path.Line([a,0],[a,500])
     let lineB=Path.Line([a+5,0],[a+5,500])
     let lineC=Path.Line([0,a],[500,a])
