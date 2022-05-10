@@ -20,6 +20,9 @@ window.addEventListener('load', function () {
 
     let q=[100,200]
 
+    for (x=0;x<500;x+=pickRandom(q)){
+        Path.Rectangle
+    }
     
 
    

@@ -13,7 +13,6 @@ window.addEventListener('load', function () {
         fillColor: null, // 塗りの色
         strokeWidth: 2 // 線の幅
     };
-    Path.Rectangle([0, 0], [500, 500])
     let background=Path.Rectangle([0, 0], [500, 500])
     background.fillColor="#2d5244"
 
@@ -26,6 +25,24 @@ window.addEventListener('load', function () {
     let randomRange = 7;
 
     let e =170
+    
+    let colors = [
+                '#99bec7',
+                '#82a1ba',
+                '#babfd1',
+                '#76ade8',
+                '#52a19e',
+                '#798a85',
+                '#fffbd9',
+    ];
+
+    let count_x=4;
+    let count_y=4;
+    let step_x=view.viewSize.width/count_x;
+    let step_y=view.viewSize.height/count_y;
+
+    let 
+
 
     for (let y = 0; y < view.viewSize.height +e; y += e) {
         for (let x = 0; x < view.viewSize.width+e; x += e) {
@@ -34,17 +51,7 @@ window.addEventListener('load', function () {
             let rand_y = Math.random() * randomRange - randomRange * 0.5;
              let circle = Path.Circle([x + rand_x, y + rand_y], w);
  
-            let colors = [
-                '#99bec7',
-                '#82a1ba',
-                '#babfd1',
-                '#76ade8',
-                '#52a19e',
-                '#798a85',
-                '#fffbd9',
-
-                
-            ];            
+                        
             circle.strokeColor = pickRandom(colors);    
             }
 
