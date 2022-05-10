@@ -13,14 +13,24 @@ window.addEventListener('load', function () {
     background.fillColor="#000000"
     background.strokeColor=null
 
-    let q=10
+    let r=10
+    
+    for (x=0;x<510;x+=10){
+        for (y=0;y<510;y+=10){
+            rand=Math.random()*r-r*0.5
+            let a=Math.random()*2
+        Path.Circle([x+rand,y+rand],a)
+        }
+    }
+    
+    let r2=100
 
-    for (x=0;x<510;x+=15){
-        for (y=0;y<510;y+=15){
-            randx=Math.random()*q-10*0.5
+    for(s=0;s<520;s+=170){
+        for(d=0;d<520;d+=170){
+            rand2=Math.random()*r2-r2*0.5
             
-            let a=Math.random()*5
-        Path.Circle([x+randx,y+randx],a)
+           let star= Path.Star([s+rand2,d+rand2],4,3,30)
+           star.rotate(45)
         }
     }
    
