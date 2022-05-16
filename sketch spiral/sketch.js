@@ -5,7 +5,7 @@ window.addEventListener('load', function () {
     project.currentStyle = {
         strokeColor: "#000000", 
         fillColor: null, 
-        strokeWidth: 3 
+        strokeWidth: 2 
     };
 
     Path.Rectangle([0, 0], [500, 500])
@@ -17,13 +17,13 @@ window.addEventListener('load', function () {
     let y = view.viewSize.height * 0.5;
 
     let count = 1000;
-    let angle = Math.PI * 0.2;
-    let length = 10;
-    let dl = 0.8;
+    let angle = 90;
+    let length = 100;
+    let dl = 10;
     let randomRange = 0;
 
     let points = [];
-    let theta = Math.PI * 0.25;
+    let theta = 10;
 
     for(let i=0;i<count;i++){
         points.push([x,y]);
@@ -34,7 +34,7 @@ window.addEventListener('load', function () {
         x+=Math.cos(theta)*length+rand_x;
         y+=Math.sin(theta)*length+rand_y;
 
-        angle += Math.PI * 0.0001;
+        angle += 0.001;
         theta += angle;
         length += dl ;
     }

@@ -14,16 +14,17 @@ window.addEventListener('load', function () {
     background.strokeColor = null
 
 
-    let w = Math.floor(Math.random() * (400 - 100) + 100)
+        let w = Math.random() * (400 - 100) + 200
 
-    for (let x = 0; x < 500; x += w) {
-        for (let y = 0; y < 500; y += w) {
+        for (let x = 0; x < 500; x += w) {
+            for (let y = 0; y < 500; y += w) {
 
-            let q = Math.random() * 300
+                let q = Math.random() * 300
+                let rand_wide=Math.random()*300
 
-            Path.Rectangle([x + q - 150, y + q], [w, 100])
+                Path.Rectangle([x + q - 150, y + q-150], [rand_wide, 100])
+            }
         }
-    }
 
     view.draw();
 });

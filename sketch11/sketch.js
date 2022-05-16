@@ -3,44 +3,37 @@ window.addEventListener('load', function () {
     view.viewSize = new Size(500, 500);
 
     project.currentStyle = {
-        strokeColor: "#000000", 
-        fillColor: null, 
-        strokeWidth: 3 
+        strokeColor: "#000000",
+        fillColor: "#000000",
+        strokeWidth: 5
     };
 
     Path.Rectangle([0, 0], [500, 500])
-    let background=Path.Rectangle([0, 0], [500, 500])
-    background.fillColor="#ffffff"
-    background.strokeColor=null
+    let background = Path.Rectangle([0, 0], [500, 500])
+    background.fillColor = "#db2100"
+    background.strokeColor = null
 
-    let x = view.viewSize.width * 0.5;
-    let y = view.viewSize.height * 0.5;
+    let x = 0;
+    let y = 0;
 
-    let count = 1000;
-    let angle = Math.PI * 0.1;
-    let length = 10;
-    let dl = 0.8;
-    let randomRange = 0;
-
-    let points = [10];
-    let theta = Math.PI * 0.25;
-
-    for(let i=0;i<count;i++){
-        points.push([x,y]);
-
-        let rand_x=Math.random()*randomRange-randomRange*0.5;
-        let rand_y=Math.random()*randomRange-randomRange*0.5;
-
-        x+=Math.cos(theta)*length+rand_x;
-        y+=Math.sin(theta)*length+rand_y;
-
-        angle += Math.PI * 0.0001;
-        theta += angle;
-        length += dl ;
+    let count = 50;
+    for (let i = 0; i < count; i++) {
+        Path.Line([x, 0], [x, 500]);
+        Path.Line([0, y], [500, y]);
+        x += i;
+        y += i;
     }
 
-    let p =new Path(points);
-    p.closed = false;
-   
-view.draw();
+    let xx = 500;
+    let yy = 500;
+    for (let i = 0; i < count; i++) {
+        Path.Line([xx, 0], [xx, 500]);
+        Path.Line([0, yy], [500, yy]);
+        xx += i;
+        yy += i;
+    }
+    // let line = Path.Line([xx, 0], [xx, 500]);
+    // let line2 = Path.Line([0, yy], [500, yy]);
+    // line.translate = (100,100);
+    view.draw();
 });
