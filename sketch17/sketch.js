@@ -3,33 +3,24 @@ window.addEventListener('load', function () {
     view.viewSize = new Size(500, 500);
 
     project.currentStyle = {
-        strokeColor: "#ffffff",
-        fillColor: null,
+        strokeColor: null,
+        fillColor: "#ffee00",
         strokeWidth: 3
     };
-
     Path.Rectangle([0, 0], [500, 500])
     let background = Path.Rectangle([0, 0], [500, 500])
-    background.fillColor = "#000000"
-    background.strokeColor = null
+    background.fillColor = "#eb3609"
+    background.strokeColor = null;
 
-    let randx1=Math.random()*100-50
-    let randy1=Math.random()*100-50
 
-    let rand_wide1=Math.random()*100+100
-    let rand_hight1=Math.random()*100+100
+    let count = 50;
 
-    Path.Rectangle([randx1,randy1],[rand_wide1,rand_hight1])
+    for (i = 0; i < count; i++) {
+        let x = Math.random() * 600 - 100;
+        let y = Math.random() * 600 - 100;
 
-    let count=10
-    for(i=0;i<count;i++){
-        let randx=Math.random()*50
-        let randy=Math.random()*50
-
-        let rand_wide=Math.random()*100+100
-        let rand_hight=Math.random()*100+100    
-
-        Path.Rectangle([rand_wide1+randx,randy1+randy],[rand_wide1+randx+rand_wide,randy1+randy+rand_hight])
+        let rec = Path.Rectangle([x, y], [80, 10]);
+        rec.rotate(Math.random() * 180);
     }
 
     view.draw();
