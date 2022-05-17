@@ -3,34 +3,55 @@ window.addEventListener('load', function () {
     view.viewSize = new Size(500, 500);
 
     project.currentStyle = {
-        strokeColor: "#ffffff",
+        strokeColor: "#5091a1",
         fillColor: null,
-        strokeWidth: 3
+        strokeWidth: 2
     };
 
-    Path.Rectangle([0, 0], [500, 500])
-    let background = Path.Rectangle([0, 0], [500, 500])
-    background.fillColor = "#000000"
-    background.strokeColor = null
+    Path.Rectangle([0, 0], [500, 500]);
+    let background = Path.Rectangle([0, 0], [500, 500]);
+    background.fillColor = "#abe0e0";
+    background.strokeColor = null;
 
-    let randx1=Math.random()*100-50
-    let randy1=Math.random()*100-50
+    function line() {
+        let x = 0;
+        let y = 0;
+        let m = 100;
+        let dl = 31.6;
+        let rand = 0;
 
-    let rand_wide1=Math.random()*100+100
-    let rand_hight1=Math.random()*100+100
+        let points = [];
+        for (let i = 0; i < m; i++) {
+            let rand_y = Math.random() * rand - rand * 0.5;
+            points.push([x, y]);
 
-    Path.Rectangle([randx1,randy1],[rand_wide1,rand_hight1])
+            x += 500 - x;
+            y += dl + rand_y;
 
-    let count=10
-    for(i=0;i<count;i++){
-        let randx=Math.random()*50
-        let randy=Math.random()*50
+            points.push([x, y]);
 
-        let rand_wide=Math.random()*100+100
-        let rand_hight=Math.random()*100+100    
+            x -= 500;
+            dl -= 2;
+            y += dl + rand_y;
+        }
 
-        Path.Rectangle([rand_wide1+randx,randy1+randy],[rand_wide1+randx+rand_wide,randy1+randy+rand_hight])
+        let p = new Path(points);
+        p.closed = false;
     }
+    line();
+
+
+    let n = 20;
+    for (i = 0; i < n; i++) {
+        let x = Math.random() * 500;
+        let y = Math.random() * 500;
+
+        let circle=Path.Circle([x, y], 20);
+        circle.strokeColor="#ffffff"
+    }
+
+
+
 
     view.draw();
 });

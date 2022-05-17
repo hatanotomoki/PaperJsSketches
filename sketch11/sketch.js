@@ -32,8 +32,5 @@ window.addEventListener('load', function () {
         xx += i;
         yy += i;
     }
-    // let line = Path.Line([xx, 0], [xx, 500]);
-    // let line2 = Path.Line([0, yy], [500, yy]);
-    // line.translate = (100,100);
     view.draw();
 });
