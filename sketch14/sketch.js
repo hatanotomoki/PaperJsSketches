@@ -10,20 +10,20 @@ window.addEventListener('load', function () {
 
     Path.Rectangle([0, 0], [500, 500])
     let background=Path.Rectangle([0, 0], [500, 500])
-    background.fillColor="#d6cda9"
+    background.fillColor="#ffffff"
     background.strokeColor=null
 
     let x = view.viewSize.width * 0.5;
     let y = view.viewSize.height * 0.5;
 
     let count = 1000;
-    let angle = 60;
-    let length = 100;
-    let dl = 10;
+    let angle = 90;
+    let length = 20;
+    let dl = 7;
     let randomRange = 0;
 
     let points = [];
-    let theta = 10;
+    let theta = 20;
 
     for(let i=0;i<count;i++){
         points.push([x,y]);
