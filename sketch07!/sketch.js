@@ -29,7 +29,7 @@ window.addEventListener('load', function () {
         for(d=0;d<520;d+=170){
             rand2=Math.random()*r2-r2*0.5
             
-           let star= Path.Star([s+rand2,d+rand2],4,3,30)
+           let star= Path.Star([s+rand2,d+rand2],4,2,30)
            star.rotate(45)
         }
     }

@@ -3,9 +3,9 @@ window.addEventListener('load', function () {
     view.viewSize = new Size(500, 500);
 
     project.currentStyle = {
-        strokeColor: null,
+        strokeColor: "#c9741e",
         fillColor: "#ffee00",
-        strokeWidth: 3
+        strokeWidth: 2
     };
     Path.Rectangle([0, 0], [500, 500])
     let background = Path.Rectangle([0, 0], [500, 500])

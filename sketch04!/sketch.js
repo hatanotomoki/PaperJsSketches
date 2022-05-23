@@ -36,17 +36,17 @@ window.addEventListener('load', function () {
                 '#fffbd9',
     ];
 
-    let count_x=4;
-    let count_y=4;
-    let step_x=view.viewSize.width/count_x;
-    let step_y=view.viewSize.height/count_y;
+    // let count_x=4;
+    // let count_y=4;
+    // let step_x=view.viewSize.width/count_x;
+    // let step_y=view.viewSize.height/count_y;
 
-    let 
+    // let 
 
 
     for (let y = 0; y < view.viewSize.height +e; y += e) {
         for (let x = 0; x < view.viewSize.width+e; x += e) {
-            for (let w = 0; w <108; w += 18) {
+            for (let w = 0; w <140; w += 20-Math.random()*5) {
             let rand_x = Math.random() * randomRange - randomRange * 0.5;
             let rand_y = Math.random() * randomRange - randomRange * 0.5;
              let circle = Path.Circle([x + rand_x, y + rand_y], w);
